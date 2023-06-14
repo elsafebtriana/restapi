@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "e2102f74-e544-4766-b183-8f1027c2ae82",
+		"name": "Rest API DMP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JobListAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dev3.dansmultipro.co.id/api/recruitment/positions.json",
+					"protocol": "http",
+					"host": [
+						"dev3",
+						"dansmultipro",
+						"co",
+						"id"
+					],
+					"path": [
+						"api",
+						"recruitment",
+						"positions.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JobDetailAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dev3.dansmultipro.co.id/api/recruitment/positions/32bf67e5-4971-47ce-985c-44b6b3860cdb",
+					"protocol": "http",
+					"host": [
+						"dev3",
+						"dansmultipro",
+						"co",
+						"id"
+					],
+					"path": [
+						"api",
+						"recruitment",
+						"positions",
+						"32bf67e5-4971-47ce-985c-44b6b3860cdb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8060/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"password\",\r\n    \"is_admin\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8060/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4NjcxNTQ0OCwiZXhwIjoxNjg2ODAxODQ4fQ.eqA0ZIoc5svmBnDiknBzJccqlgOVo3JeU4QGM1XH6kTWHtpiWMkE1M6t2T3B-fZGh4ZQAnnf6NSntv8XAWJmnQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8060/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListJobWithAuth",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4NjcxNTQ0OCwiZXhwIjoxNjg2ODAxODQ4fQ.eqA0ZIoc5svmBnDiknBzJccqlgOVo3JeU4QGM1XH6kTWHtpiWMkE1M6t2T3B-fZGh4ZQAnnf6NSntv8XAWJmnQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8060/api/v1/job",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"api",
+						"v1",
+						"job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DetailJobWithAuth",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4NjcxNTQ0OCwiZXhwIjoxNjg2ODAxODQ4fQ.eqA0ZIoc5svmBnDiknBzJccqlgOVo3JeU4QGM1XH6kTWHtpiWMkE1M6t2T3B-fZGh4ZQAnnf6NSntv8XAWJmnQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8060/api/v1/job/32bf67e5-4971-47ce-985c-44b6b3860cdb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"api",
+						"v1",
+						"job",
+						"32bf67e5-4971-47ce-985c-44b6b3860cdb"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
